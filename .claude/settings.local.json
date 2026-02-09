@@ -1,11 +1,13 @@
 {
+  "permissions": {
+    "allow": [
+      "mcp__supabase__get_publishable_keys",
+      "mcp__supabase__list_tables",
+      "Bash(npx next build:*)"
+    ]
+  },
   "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
     "supabase"
-  ],
-  "permissions": {
-    "allow": [
-      "mcp__supabase__get_publishable_keys"
-    ]
-  }
+  ]
 }

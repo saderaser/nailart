@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 import * as PopoverPrimitive from "@radix-ui/react-popover";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
@@ -19,15 +20,6 @@ const PlusIcon = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-const Settings2Icon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <path d="M20 7h-9" />
-    <path d="M14 17H5" />
-    <circle cx="17" cy="17" r="3" />
-    <circle cx="7" cy="7" r="3" />
-  </svg>
-);
-
 const SendIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" {...props}>
     <path d="M12 5.25L12 18.75" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -42,50 +34,19 @@ const XIcon = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-const GlobeIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <circle cx="12" cy="12" r="10" />
-    <path d="M2 12h20" />
-    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-  </svg>
-);
-
-const PencilIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z" />
-    <path d="m15 5 4 4" />
-  </svg>
-);
-
-const LightbulbIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="none" {...props}>
-    <path d="M12 7C9.23858 7 7 9.23858 7 12C7 13.3613 7.54402 14.5955 8.42651 15.4972C8.77025 15.8484 9.05281 16.2663 9.14923 16.7482L9.67833 19.3924C9.86537 20.3272 10.6862 21 11.6395 21H12.3605C13.3138 21 14.1346 20.3272 14.3217 19.3924L14.8508 16.7482C14.9472 16.2663 15.2297 15.8484 15.5735 15.4972C16.456 14.5955 17 13.3613 17 12C17 9.23858 14.7614 7 12 7Z" stroke="currentColor" strokeWidth="2" />
-    <path d="M12 4V3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    <path d="M18 6L19 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    <path d="M20 12H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    <path d="M4 12H3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    <path d="M5 5L6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-    <path d="M10 17H14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-  </svg>
-);
-
-const PaintBrushIcon = (props: React.SVGProps<SVGSVGElement>) => (
+const SparklesIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <path d="M18.37 2.63 14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2.12 0 1 0-3-3Z" />
-    <path d="M9 8c-2 3-4 3.5-7 4l8 10c2-1 6-5 6-7" />
-    <path d="M14.5 17.5 4.5 15" />
+    <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" />
+    <path d="M20 3v4" />
+    <path d="M22 5h-4" />
   </svg>
 );
 
-const TelescopeIcon = (props: React.SVGProps<SVGSVGElement>) => (
+const ImageIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...props}>
-    <circle cx="12" cy="12" r="2" />
-    <path d="M4.93 4.93 9 9" />
-    <path d="M14.12 9.88l5.66-5.66" />
-    <path d="m7.76 16.24-6.69 1.69 1.69-6.69" />
-    <path d="M20.71 3.29a1 1 0 0 0-1.42 0L12 10.59a1 1 0 0 0 0 1.42l0 0a1 1 0 0 0 1.42 0l7.29-7.3a1 1 0 0 0 0-1.42Z" />
-    <path d="M12 16v5" />
-    <path d="M16 20h-8" />
+    <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+    <circle cx="9" cy="9" r="2" />
+    <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
   </svg>
 );
 
@@ -182,24 +143,49 @@ const DialogContent = React.forwardRef<
 ));
 DialogContent.displayName = "DialogContent";
 
-// --- Tools list ---
-const toolsList = [
-  { id: "createImage", name: "Create an image", shortName: "Image", icon: PaintBrushIcon },
-  { id: "searchWeb", name: "Search the web", shortName: "Search", icon: GlobeIcon },
-  { id: "writeCode", name: "Write or code", shortName: "Write", icon: PencilIcon },
-  { id: "deepResearch", name: "Run deep research", shortName: "Deep Search", icon: TelescopeIcon },
-  { id: "thinkLonger", name: "Think for longer", shortName: "Think", icon: LightbulbIcon },
-];
+// --- Models list ---
+const modelsList = [
+  { id: "gemini-2.5-flash-image", name: "Flash", description: "Fast & efficient" },
+  { id: "gemini-3-pro-image-preview", name: "Pro", description: "Highest quality" },
+] as const;
+
+type ModelId = (typeof modelsList)[number]["id"];
+
+// --- Types ---
+export type GeneratedThumbnail = {
+  id: string;
+  prompt: string;
+  imageUrl: string;
+  status: string;
+  created_at: string;
+};
+
+const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
+const MAX_FILES = 10;
 
 // --- PromptArea Component ---
-export default function PromptArea() {
+export default function PromptArea({
+  onGenerated,
+  onGenerateStart,
+  onGenerateError,
+  thumbnails = [],
+}: {
+  onGenerated?: (thumbnail: GeneratedThumbnail) => void;
+  onGenerateStart?: () => void;
+  onGenerateError?: () => void;
+  thumbnails?: GeneratedThumbnail[];
+}) {
   const textareaRef = React.useRef<HTMLTextAreaElement>(null);
   const fileInputRef = React.useRef<HTMLInputElement>(null);
+  const refTimeoutRef = React.useRef<ReturnType<typeof setTimeout>>(undefined);
   const [value, setValue] = React.useState("");
-  const [imagePreview, setImagePreview] = React.useState<string | null>(null);
-  const [selectedTool, setSelectedTool] = React.useState<string | null>(null);
-  const [isPopoverOpen, setIsPopoverOpen] = React.useState(false);
-  const [isImageDialogOpen, setIsImageDialogOpen] = React.useState(false);
+  const [imagePreviews, setImagePreviews] = React.useState<string[]>([]);
+  const [dialogImageIndex, setDialogImageIndex] = React.useState<number | null>(null);
+  const [isRefPopoverOpen, setIsRefPopoverOpen] = React.useState(false);
+  const [isGenerating, setIsGenerating] = React.useState(false);
+  const [error, setError] = React.useState<string | null>(null);
+  const [selectedModel, setSelectedModel] = React.useState<ModelId>("gemini-2.5-flash-image");
+  const [isModelPopoverOpen, setIsModelPopoverOpen] = React.useState(false);
 
   React.useLayoutEffect(() => {
     const textarea = textareaRef.current;
@@ -218,29 +204,108 @@ export default function PromptArea() {
     fileInputRef.current?.click();
   };
 
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file && file.type.startsWith("image/")) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setImagePreview(reader.result as string);
-      };
-      reader.readAsDataURL(file);
-    }
+  const handleFileChange = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const files = Array.from(event.target.files || []);
     event.target.value = "";
+
+    if (files.length === 0) return;
+
+    const remaining = MAX_FILES - imagePreviews.length;
+    if (remaining <= 0) {
+      setError(`Maximum ${MAX_FILES} images allowed`);
+      return;
+    }
+
+    const filesToProcess = files.slice(0, remaining);
+
+    const oversized = filesToProcess.filter((f) => f.size > MAX_FILE_SIZE);
+    if (oversized.length > 0) {
+      setError("Each image must be under 5MB");
+      return;
+    }
+
+    const validFiles = filesToProcess.filter((f) => f.type.startsWith("image/"));
+    if (validFiles.length === 0) return;
+
+    const results = await Promise.all(
+      validFiles.map(
+        (file) =>
+          new Promise<string>((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () => resolve(reader.result as string);
+            reader.readAsDataURL(file);
+          })
+      )
+    );
+
+    setImagePreviews((prev) => [...prev, ...results].slice(0, MAX_FILES));
   };
 
-  const handleRemoveImage = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.stopPropagation();
-    setImagePreview(null);
-    if (fileInputRef.current) {
-      fileInputRef.current.value = "";
+  const handleRemoveImage = (index: number) => {
+    setImagePreviews((prev) => prev.filter((_, i) => i !== index));
+  };
+
+  const handleRefThumbnailClick = (imageUrl: string) => {
+    if (imagePreviews.length >= MAX_FILES) {
+      setError(`Maximum ${MAX_FILES} images allowed`);
+      return;
+    }
+    setImagePreviews((prev) => [...prev, imageUrl]);
+    setIsRefPopoverOpen(false);
+  };
+
+  const handleRefEnter = () => {
+    clearTimeout(refTimeoutRef.current);
+    setIsRefPopoverOpen(true);
+  };
+
+  const handleRefLeave = () => {
+    refTimeoutRef.current = setTimeout(() => setIsRefPopoverOpen(false), 200);
+  };
+
+  const handleGenerate = async () => {
+    if (!value.trim() && imagePreviews.length === 0) return;
+    setIsGenerating(true);
+    setError(null);
+    onGenerateStart?.();
+
+    try {
+      const res = await fetch("/api/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          prompt: value.trim(),
+          referenceImages: imagePreviews.length > 0 ? imagePreviews : undefined,
+          model: selectedModel,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "Failed to generate image");
+      }
+
+      onGenerated?.({
+        id: data.thumbnail.id,
+        prompt: data.thumbnail.prompt,
+        imageUrl: data.imageUrl,
+        status: data.thumbnail.status,
+        created_at: data.thumbnail.created_at,
+      });
+
+      // Clear inputs after success
+      setValue("");
+      setImagePreviews([]);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong");
+      onGenerateError?.();
+    } finally {
+      setIsGenerating(false);
     }
   };
 
-  const hasValue = value.trim().length > 0 || imagePreview;
-  const activeTool = selectedTool ? toolsList.find((t) => t.id === selectedTool) : null;
-  const ActiveToolIcon = activeTool?.icon;
+  const hasValue = value.trim().length > 0 || imagePreviews.length > 0;
 
   return (
     <div className="relative flex flex-col rounded-[28px] p-2 shadow-sm transition-colors bg-[#303030] cursor-text w-full max-w-3xl overflow-hidden">
@@ -274,40 +339,60 @@ export default function PromptArea() {
         onChange={handleFileChange}
         className="hidden"
         accept="image/*"
+        multiple
       />
 
-      {/* Image preview */}
-      {imagePreview && (
-        <DialogPrimitive.Root open={isImageDialogOpen} onOpenChange={setIsImageDialogOpen}>
-          <div className="relative mb-1 w-fit rounded-[1rem] px-1 pt-1">
-            <button
-              type="button"
-              className="transition-transform"
-              onClick={() => setIsImageDialogOpen(true)}
-            >
-              <img
-                src={imagePreview}
-                alt="Image preview"
-                className="h-14 w-14 rounded-[1rem] object-cover"
-              />
-            </button>
-            <button
-              onClick={handleRemoveImage}
-              className="absolute right-2 top-2 z-10 flex h-4 w-4 items-center justify-center rounded-full bg-[#303030] text-white transition-colors hover:bg-[#515151]"
-              aria-label="Remove image"
-            >
-              <XIcon className="h-4 w-4" />
-            </button>
-          </div>
-          <DialogContent>
-            <img
-              src={imagePreview}
-              alt="Full size preview"
-              className="w-full max-h-[95vh] object-contain rounded-[24px]"
-            />
-          </DialogContent>
-        </DialogPrimitive.Root>
+      {/* Image previews */}
+      {imagePreviews.length > 0 && (
+        <div className="flex flex-wrap gap-1.5 mb-1 px-1 pt-1">
+          {imagePreviews.map((src, i) => (
+            <div key={i} className="relative group">
+              <button
+                type="button"
+                className="transition-transform"
+                onClick={() => setDialogImageIndex(i)}
+              >
+                <Image
+                  src={src}
+                  alt={`Preview ${i + 1}`}
+                  width={56}
+                  height={56}
+                  className="h-14 w-14 rounded-[1rem] object-cover"
+                  unoptimized
+                />
+              </button>
+              <button
+                onClick={() => handleRemoveImage(i)}
+                className="absolute -right-1 -top-1 z-10 flex h-4 w-4 items-center justify-center rounded-full bg-[#303030] text-white transition-colors hover:bg-[#515151] opacity-0 group-hover:opacity-100"
+                aria-label="Remove image"
+              >
+                <XIcon className="h-3 w-3" />
+              </button>
+            </div>
+          ))}
+        </div>
       )}
+
+      {/* Full-size image dialog */}
+      <DialogPrimitive.Root
+        open={dialogImageIndex !== null}
+        onOpenChange={(open) => {
+          if (!open) setDialogImageIndex(null);
+        }}
+      >
+        <DialogContent>
+          {dialogImageIndex !== null && (
+            <Image
+              src={imagePreviews[dialogImageIndex]}
+              alt="Full size preview"
+              width={800}
+              height={450}
+              className="w-full max-h-[95vh] object-contain rounded-[24px]"
+              unoptimized
+            />
+          )}
+        </DialogContent>
+      </DialogPrimitive.Root>
 
       {/* Textarea */}
       <textarea
@@ -315,8 +400,14 @@ export default function PromptArea() {
         rows={1}
         value={value}
         onChange={handleInputChange}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" && !e.shiftKey) {
+            e.preventDefault();
+            if (hasValue && !isGenerating) handleGenerate();
+          }
+        }}
         placeholder="Describe your thumbnail idea..."
-        className="w-full resize-none border-0 bg-transparent p-3 text-white placeholder:text-gray-400 focus:ring-0 focus-visible:outline-none min-h-12"
+        className="w-full resize-none border-0 bg-transparent p-3 text-white placeholder:text-gray-400 focus:ring-0 focus-visible:outline-none min-h-24"
       />
 
       {/* Bottom toolbar */}
@@ -336,83 +427,152 @@ export default function PromptArea() {
                 </button>
               </TooltipTrigger>
               <TooltipContent side="top" showArrow>
-                <p>Attach image</p>
+                <p>Attach image (max 5MB, up to {MAX_FILES})</p>
               </TooltipContent>
             </Tooltip>
 
-            {/* Tools popover */}
-            <Popover open={isPopoverOpen} onOpenChange={setIsPopoverOpen}>
+            {/* Reference popover */}
+            <Popover open={isRefPopoverOpen} onOpenChange={setIsRefPopoverOpen}>
               <Tooltip>
                 <TooltipTrigger asChild>
                   <PopoverTrigger asChild>
                     <button
                       type="button"
+                      onMouseEnter={handleRefEnter}
+                      onMouseLeave={handleRefLeave}
                       className="flex h-8 items-center gap-2 rounded-full p-2 text-sm text-white transition-colors hover:bg-[#515151]"
                     >
-                      <Settings2Icon className="h-4 w-4" />
-                      {!selectedTool && "Tools"}
+                      <ImageIcon className="h-4 w-4" />
+                      Reference
                     </button>
                   </PopoverTrigger>
                 </TooltipTrigger>
                 <TooltipContent side="top" showArrow>
-                  <p>Explore Tools</p>
+                  <p>Reference existing thumbnails</p>
                 </TooltipContent>
               </Tooltip>
-              <PopoverContent side="top" align="start">
-                <div className="flex flex-col gap-1">
-                  {toolsList.map((tool) => (
+              <PopoverContent
+                side="top"
+                align="start"
+                className="w-72"
+                onMouseEnter={handleRefEnter}
+                onMouseLeave={handleRefLeave}
+              >
+                {thumbnails.length === 0 ? (
+                  <div className="flex flex-col items-center justify-center py-4 text-center">
+                    <ImageIcon className="h-5 w-5 text-white/20 mb-2" />
+                    <p className="text-xs text-white/40">No thumbnails yet</p>
+                  </div>
+                ) : (
+                  <div className="grid grid-cols-2 gap-1.5 max-h-56 overflow-y-auto pr-0.5">
+                    {thumbnails.map((thumb) => (
+                      <button
+                        key={thumb.id}
+                        onClick={() => handleRefThumbnailClick(thumb.imageUrl)}
+                        disabled={imagePreviews.length >= MAX_FILES}
+                        className="relative aspect-video rounded-lg overflow-hidden hover:ring-2 hover:ring-white/30 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
+                      >
+                        <Image
+                          src={thumb.imageUrl}
+                          alt={thumb.prompt}
+                          fill
+                          className="object-cover"
+                          sizes="120px"
+                          unoptimized
+                        />
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </PopoverContent>
+            </Popover>
+
+            {/* Model selector */}
+            <Popover open={isModelPopoverOpen} onOpenChange={setIsModelPopoverOpen}>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <PopoverTrigger asChild>
                     <button
-                      key={tool.id}
-                      onClick={() => {
-                        setSelectedTool(tool.id);
-                        setIsPopoverOpen(false);
-                      }}
-                      className="flex w-full items-center gap-2 rounded-md p-2 text-left text-sm hover:bg-[#515151]"
+                      type="button"
+                      className="flex h-8 items-center gap-1.5 rounded-full px-2.5 text-sm text-white/70 transition-colors hover:bg-[#515151] hover:text-white"
                     >
-                      <tool.icon className="h-4 w-4" />
-                      <span>{tool.name}</span>
+                      <SparklesIcon className="h-4 w-4" />
+                      <span className="text-xs">{modelsList.find((m) => m.id === selectedModel)?.name}</span>
+                    </button>
+                  </PopoverTrigger>
+                </TooltipTrigger>
+                <TooltipContent side="top" showArrow>
+                  <p>Select model</p>
+                </TooltipContent>
+              </Tooltip>
+              <PopoverContent side="top" align="start" className="w-52">
+                <div className="flex flex-col gap-1">
+                  {modelsList.map((model) => (
+                    <button
+                      key={model.id}
+                      onClick={() => {
+                        setSelectedModel(model.id);
+                        setIsModelPopoverOpen(false);
+                      }}
+                      className={cn(
+                        "flex w-full items-center justify-between rounded-md p-2 text-left text-sm transition-colors",
+                        selectedModel === model.id
+                          ? "bg-white/10 text-white"
+                          : "hover:bg-[#515151] text-white/70"
+                      )}
+                    >
+                      <div className="flex flex-col">
+                        <span className="font-medium">{model.name}</span>
+                        <span className="text-xs text-white/40">{model.description}</span>
+                      </div>
+                      {selectedModel === model.id && (
+                        <div className="h-1.5 w-1.5 rounded-full bg-green-400" />
+                      )}
                     </button>
                   ))}
                 </div>
               </PopoverContent>
             </Popover>
 
-            {/* Active tool badge */}
-            {activeTool && (
-              <>
-                <div className="h-4 w-px bg-gray-600" />
-                <button
-                  onClick={() => setSelectedTool(null)}
-                  className="flex h-8 items-center gap-2 rounded-full px-2 text-sm hover:bg-[#3b4045] cursor-pointer text-[#99ceff] transition-colors"
-                >
-                  {ActiveToolIcon && <ActiveToolIcon className="h-4 w-4" />}
-                  {activeTool.shortName}
-                  <XIcon className="h-4 w-4" />
-                </button>
-              </>
-            )}
-
             {/* Send button */}
             <div className="ml-auto">
               <Tooltip>
                 <TooltipTrigger asChild>
                   <button
-                    type="submit"
-                    disabled={!hasValue}
+                    type="button"
+                    disabled={!hasValue || isGenerating}
+                    onClick={handleGenerate}
                     className="flex h-8 w-8 items-center justify-center rounded-full text-sm font-medium transition-colors bg-white text-black hover:bg-white/80 disabled:bg-[#515151] disabled:text-gray-500 disabled:pointer-events-none"
                   >
-                    <SendIcon className="h-6 w-6" />
-                    <span className="sr-only">Send message</span>
+                    {isGenerating ? (
+                      <div className="h-4 w-4 border-2 border-gray-400 border-t-black rounded-full animate-spin" />
+                    ) : (
+                      <SendIcon className="h-6 w-6" />
+                    )}
+                    <span className="sr-only">{isGenerating ? "Generating..." : "Generate thumbnail"}</span>
                   </button>
                 </TooltipTrigger>
                 <TooltipContent side="top" showArrow>
-                  <p>Send</p>
+                  <p>{isGenerating ? "Generating..." : "Generate thumbnail"}</p>
                 </TooltipContent>
               </Tooltip>
             </div>
           </div>
         </TooltipProvider>
       </div>
+
+      {/* Error message */}
+      {error && (
+        <div className="flex items-center justify-between gap-2 px-4 pb-3">
+          <p className="text-sm text-red-400">{error}</p>
+          <button
+            onClick={() => setError(null)}
+            className="text-xs text-white/40 hover:text-white/60 transition-colors"
+          >
+            Dismiss
+          </button>
+        </div>
+      )}
     </div>
   );
 }

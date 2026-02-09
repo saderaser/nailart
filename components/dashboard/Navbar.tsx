@@ -10,10 +10,10 @@ export default function DashboardNavbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-5 py-4 flex items-center justify-between pointer-events-none">
-      {/* Left: Floating Logo */}
+      {/* Left: Floating Logo - hidden on desktop where sidebar exists */}
       <Link
         href="/dashboard"
-        className="pointer-events-auto flex items-center gap-2.5 px-4 py-2.5 rounded-2xl border border-white/10 backdrop-blur-xl shadow-lg shadow-black/20 transition-all hover:border-white/20 hover:shadow-xl hover:shadow-black/30"
+        className="pointer-events-auto flex items-center gap-2.5 px-4 py-2.5 rounded-2xl border border-white/10 backdrop-blur-xl shadow-lg shadow-black/20 transition-all hover:border-white/20 hover:shadow-xl hover:shadow-black/30 lg:hidden"
         style={{
           background:
             "linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02))",
@@ -31,6 +31,8 @@ export default function DashboardNavbar() {
           NailArt AI
         </span>
       </Link>
+      {/* Spacer for desktop layout */}
+      <div className="hidden lg:block" />
 
       {/* Right: Floating Profile Popover */}
       <PopoverPrimitive.Root>
