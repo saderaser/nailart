@@ -59,27 +59,25 @@ export default function Navbar() {
           {loading ? (
             <div className="w-24 h-10 rounded-full bg-white/10 animate-pulse" />
           ) : user ? (
-            <div className="flex items-center gap-3">
+            <button
+              onClick={() => router.push("/dashboard")}
+              className="px-5 py-2.5 rounded-full text-sm font-bold text-white border border-white/25 backdrop-blur-md shadow-lg transition-all hover:bg-white/20 cursor-pointer flex items-center gap-2"
+              style={{
+                background:
+                  "linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.06))",
+              }}
+            >
               {user.user_metadata?.avatar_url && (
                 <Image
                   src={user.user_metadata.avatar_url}
                   alt="Avatar"
-                  width={32}
-                  height={32}
+                  width={24}
+                  height={24}
                   className="rounded-full"
                 />
               )}
-              <button
-                onClick={signOut}
-                className="px-5 py-2.5 rounded-full text-sm font-bold text-white border border-white/25 backdrop-blur-md shadow-lg transition-all hover:bg-white/20 cursor-pointer"
-                style={{
-                  background:
-                    "linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.06))",
-                }}
-              >
-                Sign Out
-              </button>
-            </div>
+              Dashboard
+            </button>
           ) : (
             <button
               onClick={() => router.push("/auth")}
