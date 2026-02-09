@@ -77,7 +77,7 @@ export default function AetherHero({
   title = "Create YouTube Thumbnails with AI",
   subtitle = "Eye-catching thumbnails in seconds — no designer needed. NailArt AI generates the perfect thumbnail for your videos automatically.",
   ctaLabel = "Get Started",
-  ctaHref = "#",
+  ctaHref = "/auth",
   secondaryCtaLabel,
   secondaryCtaHref,
 
